@@ -15,7 +15,7 @@ setup(
     zip_safe=True,
     maintainer='timo',
     maintainer_email='timo.schaffner@stud.hslu.ch',
-    description='Manager Node for Talking to a CNC Machine over ROS',
+    description='Manager Node for Talking to a CNC Machine over ROS2',
     license='MIT',
     extras_require={
         'test': [
@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'vibe_node = cnc_manager.manager_node_vibe:main',
             'manager_node = cnc_manager.manager_node:main'
         ],
     },
