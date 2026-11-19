@@ -14,9 +14,9 @@ from grbl_msgs.srv import Stop as StopGrbl
 
 import time
 
-class CncManager(Node):
+class CncManager_vibe(Node):
     def __init__(self):
-        super().__init__('CncManager')
+        super().__init__('CncManager_vibe')
 
         self.declare_parameters(
             namespace='',
@@ -204,7 +204,7 @@ class CncManager(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    cnc = CncManager()
+    cnc = CncManager_vibe()
     rclpy.spin(cnc)
     cnc.destroy_node()
     rclpy.shutdown()
